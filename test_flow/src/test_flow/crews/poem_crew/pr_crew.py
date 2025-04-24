@@ -1,4 +1,8 @@
 from crewai import Agent, Crew, Process, Task
+from crewai.memory import LongTermMemory, ShortTermMemory, EntityMemory
+from crewai.memory.storage.rag_storage import RAGStorage
+from crewai.memory.storage.ltm_sqlite_storage import LTMSQLiteStorage
+import os
 
 class PRCrew:
     """PR Crew for analyzing company PR performance"""
@@ -57,6 +61,41 @@ class PRCrew:
             agents=[company_pr_analyst, pr_professional, report_writer],
             tasks=[collect_articles_task, analyze_articles_task, write_report_task],
             process=Process.sequential,
-            memory=True,
-            verbose=True
+
+            # # Memory configuration
+            # memory=True,
+
+            # # Long-term memory for persistent storage across sessions
+            # long_term_memory = LongTermMemory(
+            #     storage=LTMSQLiteStorage(
+            #         db_path="./memory/long_term_memory_storage.db"
+            #     )
+            # ),
+            # # Short-term memory for current context using RAG
+            # short_term_memory = ShortTermMemory(
+            #     storage = RAGStorage(
+            #             embedder_config={
+            #                 "provider": "openai",
+            #                 "config": {
+            #                     "model": 'text-embedding-3-small'
+            #                 }
+            #             },
+            #             type="short_term",
+            #             path="./memory/"
+            #         )
+            #     ),
+            # # Entity memory for tracking key information about entities
+            # entity_memory = EntityMemory(
+            #     storage=RAGStorage(
+            #         embedder_config={
+            #             "provider": "openai",
+            #             "config": {
+            #                 "model": 'text-embedding-3-small'
+            #             }
+            #         },
+            #         type="short_term",
+            #         path="./memory/"
+            #     )
+            # ),
+            verbose=True,
         )
