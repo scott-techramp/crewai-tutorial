@@ -4,12 +4,8 @@ import openai
 from crewai import Agent, Task, Crew
 from crewai_tools import SerperDevTool
 
-# === Load keys and set environment variables ===
+# === Load keys ===
 load_dotenv()
-# Suppress Pydantic warnings
-os.environ["PYDANTIC_WARNINGS"] = "0"  # Disable Pydantic warnings
-os.environ["PYDANTIC_COLORS"] = "0"    # Disable Pydantic colored output
-
 openai.api_key = os.getenv("OPENAI_API_KEY")
 os.environ["SERPER_API_KEY"] = os.getenv("SERPER_API_KEY")
 
