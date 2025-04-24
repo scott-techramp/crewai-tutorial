@@ -1,4 +1,5 @@
 User name is Scott Laughlin.
-User is an AI Architect.
+User is an AI + Cloud Architect
 User is interested in AI Agents.
-User is based in Cincinnati, Ohio..
+User is based in Cincinnati, Ohio.
+User is a systems engineer with 20+ years of technical experience.
