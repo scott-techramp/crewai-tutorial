@@ -19,10 +19,3 @@ write_report:
     A report about the collected articles, webpages, and other sources of information about the required company.
   agent: report_writer
 
-# write_poem:
-#   description: >
-#     Write a poem about how CrewAI is awesome.
-#     Ensure the poem is engaging and adheres to the specified sentence count of {sentence_count}.
-#   expected_output: >
-#     A beautifully crafted poem about CrewAI, with exactly {sentence_count} sentences.
-#   agent: poem_writer

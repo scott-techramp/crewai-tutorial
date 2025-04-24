@@ -57,5 +57,6 @@ class PRCrew:
             agents=[company_pr_analyst, pr_professional, report_writer],
             tasks=[collect_articles_task, analyze_articles_task, write_report_task],
             process=Process.sequential,
+            memory=True,
             verbose=True
         )
