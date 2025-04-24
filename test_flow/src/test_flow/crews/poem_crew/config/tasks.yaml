@@ -1,0 +1,28 @@
+# collect_articles:
+#   description: >
+#     Collect articles, webpages, and other sources of information about the required company.
+#   expected_output: >
+#     A list of articles, webpages, and other sources of information about the required company.
+#   agent: company_pr_analyst
+
+# analyze_articles:
+#   description: >
+#     Analyze the collected articles, webpages, and other sources of information about the required company. Conduct a sentiment analysis and categorize performance against company PR Goals.
+#   expected_output: >
+#     A list of articles, webpages, and other sources of information about the required company.
+#   agent: pr_professional
+
+# write_report:
+#   description: >
+#     Write a report about the collected articles, webpages, and other sources of information about the required company.
+#   expected_output: >
+#     A report about the collected articles, webpages, and other sources of information about the required company.
+#   agent: report_writer
+
+write_poem:
+  description: >
+    Write a poem about how CrewAI is awesome.
+    Ensure the poem is engaging and adheres to the specified sentence count of {sentence_count}.
+  expected_output: >
+    A beautifully crafted poem about CrewAI, with exactly {sentence_count} sentences.
+  agent: poem_writer

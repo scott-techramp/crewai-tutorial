@@ -1,0 +1,23 @@
+[project]
+name = "tutorial_project"
+version = "0.1.0"
+description = "tutorial_project using crewAI"
+authors = [{ name = "Your Name", email = "scott@techramp.io" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.114.0,<1.0.0"
+]
+
+[project.scripts]
+tutorial_project = "tutorial_project.main:run"
+run_crew = "tutorial_project.main:run"
+train = "tutorial_project.main:train"
+replay = "tutorial_project.main:replay"
+test = "tutorial_project.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
